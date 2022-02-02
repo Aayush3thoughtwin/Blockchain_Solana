@@ -13,15 +13,16 @@ use std::mem::size_of;
 
 /// Minimum number of multisignature signers (min N)
 pub const MIN_SIGNERS: usize = 1;
-/// Maximum number of multisignature signers (max N)
 
+/// Maximum number of multisignature signers (max N)
 pub const MAX_SIGNERS: usize = 11;
+
 // Creating Fund.
-pub struct CreateFund{
-    currencies:PublicKey,
-    List_shares:,
-    Is_active: bool,
-    Initial_price: i64,
+pub enum CreateFund{
+    currencies(String) ,
+    List_shares(String),
+    Is_active(bool),
+    Initial_price(i64)
 
 }
 
